@@ -5,12 +5,8 @@
 body,
 html, 
 .body {
-  background: #f3f3f3 !important;
+  background: #fff !important;
   -webkit-font-smoothing: antialiased;
-}
-
-.container.header {
-  background: #f3f3f3;
 }
 
 .body-drip {
@@ -19,29 +15,80 @@ html,
 
 // Full Width Headers
 .header {
-  //background: #8a8a8a;
+
+  & &-logo {
+    width: 90px;
+    margin: auto;
+    @media only screen and (max-width: #{$global-breakpoint}) {
+      width: 90px;
+      display: block;
+      height: auto;
+      margin: auto;
+    }
+  }
+
+  & .container {
+    background: #fff;
+  }
+
 }
 
-.header .columns {
-  padding-bottom: 0;
+.callout {
+  & &-inner {
+    &.body {
+      border: 0;
+      background: transparent!important;
+      text-align: center;
+      padding: 0 90px; 
+      line-height: 1.7!important;
+      @media only screen and (max-width: #{$global-breakpoint}) {
+        padding: 0;
+      }
+    }
+  }
 }
 
-.header p {
-  color: #fff;
-  padding-top: 15px;
+h1,h2,h3,h4,h5 {
+  font-family: 'Cormorant', 'georgia', serif;
+  line-height: 1.2;
+  margin: 0;
+
+  &.headline {
+    color: $brown;
+    font-size: 69px;
+    line-height: 1;
+    @media only screen and (max-width: #{$global-breakpoint}) {
+      font-size: 49px;
+    }
+  }
+
+  &.subheadline {
+
+  }
+
+  &.brown {
+    color: $brown;
+  }
+
 }
 
-.header .wrapper-inner {
-  padding: 20px;
+.button.cta {
+  text-transform: uppercase;
+  a {
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 15px 0 13px;
+    @media only screen and (max-width: #{$global-breakpoint}) {
+      font-size: 9px;
+      padding: 15px 0 14px;
+    }
+  }
 }
 
-.header .container {
-  background: transparent;
-}
-
-.lead {
-  color: $brown;
-  font-size: 15px!important;
+.contact-section {
+  p {
+    margin-bottom: 0;
+  }
 }
 
 .social-links a {
@@ -49,18 +96,13 @@ html,
   width: auto!important;
 }
 
-h5 {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: $primary-color;
-  margin-bottom: 5px;
-}
-
 hr.divider {
   height: 1px;
   border: 0;
-  background: $light-gray;
-  margin: 20px 0;
+  margin: 0;
+  &.brown {
+    background: $brown;
+  }
 }
 
 hr.invisible {
