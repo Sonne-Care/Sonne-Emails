@@ -1,17 +1,48 @@
 ---
 subject: My Basic Email Template Subject
-# Headlines
+
 headline: Here's to better, safer skin
 subheadline: Your Sonne System is on the way.
-# Buttons
+
 button_1: View Your Order
-button_1_url: #
+button_1_url: http://google.com
 button_2: Create Account
-button_2_url: #
+button_2_url: http://google.com
 ---
 
-{{> header }}
-{{> headline }}
+<wrapper class="header">
+  <container>
+    <center>
+      <spacer size="20"></spacer>
+      <a href="/"><img src="assets/img/logo-sonne.png" class="header-logo" alt="Sonne"></a>
+      <spacer size="20"></spacer>
+    </center>
+  </container>
+</wrapper>
+
+<container>
+  <spacer size="40"></spacer>
+  <row>
+    <columns></columns>
+    <columns large="12" small="12">
+      <h1 class="text-center headline">{{ headline }}</h1>
+      <spacer size="5"></spacer>
+      <h3 class="text-center subheadline">{{ subheadline }}</h3>
+    </columns>
+    <columns></columns>
+  </row>
+  <spacer size="10"></spacer>
+  <row class="collapse">
+    <columns small="1"></columns>
+    <columns large="2" small="5">
+      <button class="primary expand cta" href="#">{{ button_1 }}</button>
+    </columns>
+    <columns large="2" small="5">
+      <button class="secondary expand cta" href="#">{{ button_2 }}</button>
+    </columns>
+    <columns small="1"></columns>
+  </row>
+</container>
 
 <container>
   <row>
