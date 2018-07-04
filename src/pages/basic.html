@@ -1,91 +1,62 @@
 ---
-subject: My Basic Email Template Subject
-
-headline: Here's to better, safer skin
-subheadline: Your Sonne System is on the way.
-
-button_1: View Your Order
-button_1_url: http://google.com
-button_2: Create Account
-button_2_url: http://google.com
+subject: Basic Email
+description: Welcome to Sonne
 ---
 
 <wrapper class="header">
   <container>
-    <center>
-      <spacer size="20"></spacer>
-      <a href="/"><img src="assets/img/logo-sonne.png" class="header-logo" alt="Sonne"></a>
-      <spacer size="20"></spacer>
-    </center>
+    <a href="http://sonnecare.com"><img src="assets/img/logo-sonne.png" alt="Sonne"></a>
   </container>
 </wrapper>
 
-<container>
-  <spacer size="40"></spacer>
-  <row>
-    <columns></columns>
-    <columns large="12" small="12">
-      <h1 class="text-center headline">{{ headline }}</h1>
-      <spacer size="5"></spacer>
-      <h3 class="text-center subheadline">{{ subheadline }}</h3>
-    </columns>
-    <columns></columns>
-  </row>
-  <spacer size="10"></spacer>
-  <row class="collapse">
-    <columns small="1"></columns>
-    <columns large="2" small="5">
-      <button class="primary expand cta" href="#">{{ button_1 }}</button>
-    </columns>
-    <columns large="2" small="5">
-      <button class="secondary expand cta" href="#">{{ button_2 }}</button>
-    </columns>
-    <columns small="1"></columns>
-  </row>
-</container>
+<wrapper class="headlines">
+  <container>
+    <spacer size="40"></spacer>
+    <row>
+      <columns>
+        <h1>Here's to better, safer skin</h1>
+        <h3>Thank you for your purchase! Stress-free skincare is nearly yours</h3>
+      </columns>
+    </row>
+    <spacer size="20"></spacer>
+  </container>
+</wrapper>
 
-<container>
-  <row>
-    <columns small="4"></columns>
-    <columns large="2" small="4">
-      <hr class="divider brown">
-    </columns>
-    <columns small="4"></columns>
-  </row>
-  <row class="contact-section">
-    <columns class="show-for-large"></columns>
-    <columns large="8" small="12">
-      <p class="text-center">
-        Questions? Reply to this email or contact <br>
-        us at <a href="mailto:info@sonnecare.com">info@sonnecare.com</a>
-      </p>
-    </columns>
-    <columns class="show-for-large"></columns>
-  </row>
-  <row>
-    <columns small="4"></columns>
-    <columns large="2" small="4">
-      <hr class="divider brown">
-    </columns>
-    <columns small="4"></columns>
-  </row>
-</container>
+<wrapper class="buttons">
+  <container>
+    <row class="collapse">
+      <columns large="2" small="1"></columns>
+      <columns large="4" small="5"><button class="primary expand cta" href="#">View Your Order</button></columns>
+      <columns large="4" small="5"><button class="secondary expand cta" href="#">Create Account</button></columns>
+      <columns large="2" small="1"></columns>
+    </row>
+    <spacer size="20"></spacer>
+  </container>
+</wrapper>
 
-<container>
-  <row>
-    <columns small="12">
-      <h3 class="text-center brown">The More You know...</h3>
-      <h4 class="text-center semibold">the better your skin looks.</h4>
-      <spacer size="20"></spacer>
-      <callout class="body">
-        You only need one thing to get great skin: the truth. 
-        That’s why we used real research to create Sonne. 
-        What’s in our system? Science-backed ingredients  selected by a real doctor to protect and enhance skin. 
-        What’s not? Wallet-busting ingredients with misleading names and little — to no — real benefits. 
-        Learn more about the science behind great skin here.
-      </callout>
-    </columns>
-  </row>
-</container>
-
-{{> footer }}
+<wrapper class="info">
+  <container>
+    <row>
+      <columns large="5" small="4"></columns>
+      <columns large="2" small="4"><hr></columns>
+      <columns large="5" small="4"></columns>
+    </row>
+    <spacer size="10"></spacer>
+    <row>
+      <columns large="3" small="2"></columns>
+      <columns large="6" small="8">
+        <p>
+          Questions? Reply to this email or contact us at info@sonnecare.com
+        </p>
+      </columns>
+      <columns large="3" small="2"></columns>
+    </row>
+    <spacer size="10"></spacer>
+    <row>
+      <columns large="5" small="4"></columns>
+      <columns large="2" small="4"><hr></columns>
+      <columns large="5" small="4"></columns>
+    </row>
+    <spacer size="20"></spacer>
+  </container>
+</wrapper>

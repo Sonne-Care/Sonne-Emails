@@ -1,133 +1,97 @@
 // These are the styles to make some of the templates look extra nice.
 // Feel free to remove these styles for production!
 
-// Body Styles 
-body,
-html, 
-.body {
-  background: #fff !important;
+body,html {
   -webkit-font-smoothing: antialiased;
 }
 
-.body-drip {
-  border-top: 8px solid #663399;
-}
-
-// Full Width Headers
 .header {
 
-  & &-logo {
-    width: 90px;
-    margin: auto;
-    @media only screen and (max-width: #{$global-breakpoint}) {
-      width: 90px;
-      display: block;
-      height: auto;
-      margin: auto;
+  & .container {
+    background-color: $white;
+  }
+
+  & img {
+    display: block;
+    margin: 20px auto;
+    width: 89px;
+    height: auto;
+  }
+
+  @media only screen and (max-width: #{$global-breakpoint}) {
+    & img {
+      display: block!important;
+      margin: 20px auto!important;
+      width: 89px!important;
+      height: auto!important;
     }
   }
 
-  & .container {
-    background: #fff;
+}
+
+.headlines {
+
+  & h1 {
+    margin: 0 40px;
+    text-align: center;
+    font-family: cormorant, times, serif;
+    font-size: 69px;
+    line-height: 1;
+    color: $brown;
+    @media only screen and (max-width: #{$global-breakpoint}) {
+      font-size: 48px!important;
+      margin: 0!important;
+      margin-bottom: 10px!important;
+      hyphens: auto!important;
+    }
+  }
+
+  & h3 {
+    margin: 0 40px!important;
+    text-align: center;
+    font-family: cormorant, times, serif;
+    line-height: 1.3;
+    @media only screen and (max-width: #{$global-breakpoint}) {
+      font-size: 21px!important;
+      margin: 0!important;
+      font-weight: 500!important;
+    }
+  }
+
+  & .columns {
+    padding-bottom: 0;
   }
 
 }
 
-.callout {
-  & &-inner {
-    &.body {
-      border: 0;
-      background: transparent!important;
-      text-align: center;
-      padding: 0 90px; 
-      line-height: 1.7!important;
+.buttons {
+  & .button {
+    margin-bottom: 0;
+    & a {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 12px!important;
       @media only screen and (max-width: #{$global-breakpoint}) {
-        padding: 0;
+        font-size: 10px!important;
       }
     }
   }
-}
-
-h1,h2,h3,h4,h5 {
-  font-family: 'Cormorant', 'georgia', serif;
-  line-height: 1.2;
-  margin: 0;
-
-  &.headline {
-    color: $brown;
-    font-size: 69px;
-    line-height: 1;
-    @media only screen and (max-width: #{$global-breakpoint}) {
-      font-size: 49px;
-    }
-  }
-
-  &.subheadline {
-
-  }
-
-  &.brown {
-    color: $brown;
-  }
-
-}
-
-.button.cta {
-  text-transform: uppercase;
-  a {
-    font-size: 11px;
-    letter-spacing: 1px;
-    padding: 15px 0 13px;
-    @media only screen and (max-width: #{$global-breakpoint}) {
-      font-size: 9px;
-      padding: 15px 0 14px;
-    }
+  & .columns {
+    padding-bottom: 0;
   }
 }
 
-.contact-section {
-  p {
+.info {
+  & hr {
+    border: 0;
+    height: 1px;
+    background-color: $primary-color;
+  }
+  & p {
+    text-align: center;
     margin-bottom: 0;
   }
-}
-
-.social-links a {
-  display:inline!important;
-  width: auto!important;
-}
-
-hr.divider {
-  height: 1px;
-  border: 0;
-  margin: 0;
-  &.brown {
-    background: $brown;
+  & .columns {
+    padding-bottom: 0;
   }
-}
-
-hr.invisible {
-  height: 0px;
-  border: 0;
-  background: transparent;
-  margin: 20px 0;
-}
-
-// Social Media
-table.button.facebook table td {
-  background: #3B5998 !important;
-  border-color: #3B5998;
-}
-
-table.button.twitter table td {
-  background: #1daced !important;
-  border-color: #1daced;
-}
-
-table.button.google table td {
-  background: #DB4A39 !important;
-  border-color: #DB4A39;
-}
-
-.wrapper.secondary {
-  background: #f3f3f3;
 }

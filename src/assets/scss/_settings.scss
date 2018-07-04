@@ -17,7 +17,7 @@
 // ---------
 
 $primary-color: #A08059;
-$secondary-color: #DABFA8;
+$secondary-color: lighten(#A08059, 20%);
 $success-color: #3adb76;
 $warning-color: #ffae00;
 $alert-color: #ec5840;
@@ -27,7 +27,7 @@ $dark-gray: #8a8a8a;
 $black: #333333;
 $white: #fefefe;
 $brown: #A08059;
-$bone: #DABFA8;
+$bone: #B19777;
 $lightBrown: #F8F8F8;
 $pre-color: #ff6908;
 $global-width: 650px;
