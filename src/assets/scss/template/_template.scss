@@ -43,6 +43,7 @@ body,html {
     font-size: 60px;
     line-height: 1;
     color: $brown;
+    letter-spacing: -2px;
     @media only screen and (max-width: #{$global-breakpoint}) {
       font-size: 48px!important;
       margin: 0!important;
@@ -106,7 +107,7 @@ body,html {
 .bodycopy {
 
   & h2 {
-    margin: 0 100px;
+    margin: 0 100px!important;
     text-align: center;
     font-family: cormorant, times, serif;
     line-height: 1.3;
@@ -142,11 +143,50 @@ body,html {
 .paragraphs {
 
   & p {
-    margin: 0 100px;
+    margin: 0 100px!important;
     text-align: center;
     @media only screen and (max-width: #{$global-breakpoint}) {
       margin: 0 30px!important;
     }
+  }
+
+  & hr.horizontal-divider {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  & h2 {
+    margin: 0 40px!important;
+    text-align: center;
+    font-family: cormorant, times, serif;
+    line-height: 1.3;
+    font-size: 42px!important;
+    color: $brown;
+    @media only screen and (max-width: #{$global-breakpoint}) {
+      font-size: 30px!important;
+      margin: 0!important;
+    }
+  }
+
+  & h4 {
+    margin: 10px 0 10px;
+    text-align: center;
+    font-family: roboto, times, serif;
+    line-height: 1.3;
+    color: $brown;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    @media only screen and (max-width: #{$global-breakpoint}) {
+      font-size: 13px!important;
+      margin: 0!important;
+      margin-bottom: 10px!important;
+      hyphens: auto!important;
+    }
+  }
+
+  .button {
+    margin: 10px 0;;
   }
 
 }
@@ -159,7 +199,7 @@ body,html {
     font-family: roboto, times, serif;
     line-height: 1.3;
     color: $brown;
-    font-size: 13px;
+    font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
     @media only screen and (max-width: #{$global-breakpoint}) {
@@ -174,4 +214,44 @@ body,html {
     padding-bottom: 0;
   }
 
+  & img {
+    @media only screen and (max-width: #{$global-breakpoint}) {
+      display: block!important;
+      height: 22px!important;
+      width: auto!important;
+    }
+  }
+
+}
+
+.footer {
+
+  & .container {
+    background-color: $white;
+  }
+
+  & .menu-item {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    a {
+      color: $medium-gray!important;
+    }
+  }
+
+}
+
+.vertical-divider {
+  border: 0;
+  background-color: lighten($primary-color, 20%);
+  width: 1px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.horizontal-divider {
+  border: 0;
+  margin: 15px 0;
+  background-color: #eee;
+  height: 1px;
 }
