@@ -5,6 +5,15 @@ body,html {
   -webkit-font-smoothing: antialiased;
 }
 
+// Undo hyphenation
+td {
+  word-break: break-word;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+  border-collapse: collapse !important;
+}
+
 .button a {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -107,7 +116,7 @@ body,html {
 .bodycopy {
 
   & h2 {
-    margin: 0 100px!important;
+    margin: 0 100px;
     text-align: center;
     font-family: cormorant, times, serif;
     line-height: 1.3;
@@ -143,7 +152,7 @@ body,html {
 .paragraphs {
 
   & p {
-    margin: 0 100px!important;
+    margin: 0 100px;
     text-align: center;
     @media only screen and (max-width: #{$global-breakpoint}) {
       margin: 0 30px!important;
