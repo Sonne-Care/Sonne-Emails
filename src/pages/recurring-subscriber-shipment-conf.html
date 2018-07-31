@@ -1,14 +1,56 @@
 ---
 # Basics
-subject: Let’s smooth this out. 
-description: Better skincare for better skin. 
-# Headlines
-headline_1: The skincare industry is dirty
-headline_2: We’re here to clean it up
+subject: Talk about timing.
+description: Your refill has shipped.
+button_1_copy: Track Your Order
+button_1_link: order_status_url
+button_2_copy: Manage Account
+button_2_link: http://sonnecare.com/account
 ---
 
 {{> header }}
-{{> headline }}
+
+<wrapper class="headlines">
+  <container>
+    <a href="http://sonnecare.com" title="Don’t worry. We’ll be there soon.">
+      <img src="assets/img/theresoon.jpg" alt="Don’t worry. We’ll be there soon.">
+    </a>
+  </container>
+</wrapper>
+
+<wrapper class="paragraphs">
+  <container>
+    <p>Your monthly shipment of sun-defying, blemish-reversing, <br>non-toxic goodness is on its way.</p>
+    <spacer size="30"></spacer>
+  </container>
+</wrapper>
+
+{{> buttons }}
+
+<wrapper class="paragraphs">
+  <container>
+    <spacer size="20"></spacer>
+    <row>
+      <columns large="1" small="1"></columns>
+      <columns>
+        <callout class="line-items">
+          <row class="collapse">
+            <columns large="4" small="4">
+              <img src="assets/img/SonneCare_Lifestyle2-2180.jpg" alt="Sonne">
+            </columns>
+            <columns large="1" small="1"></columns>
+            <columns large="7" small="7">
+              <h4 class="gray">Items in Shipment:</h4>
+              <h4>Sonne System</h4>
+              <h4>Quantity: 1</h4>
+            </columns>
+          </row>
+        </callout>
+      </columns>
+      <columns large="1" small="1"></columns>
+    </row>
+  </container>
+</wrapper>
 
 {{> socials }}
 {{> footer }}

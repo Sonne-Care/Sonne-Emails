@@ -1,14 +1,100 @@
 ---
 # Basics
-subject: Let’s smooth this out. 
-description: Better skincare for better skin. 
+subject: Order Confirmed. (Nice).
+description: Hey, look at you—being all responsible with your skin.
 # Headlines
-headline_1: The skincare industry is dirty
+headline_1: Thank You!
 headline_2: We’re here to clean it up
+# Buttons
+# Button Section
+button_1_copy: View Your Order
+button_1_link: http://google.com
+button_2_copy: Manage Account
+button_2_link: http://google.com
 ---
 
 {{> header }}
-{{> headline }}
+
+<wrapper class="headlines">
+  <container>
+    <spacer size="60"></spacer>
+    <row>
+      <columns>
+        <h1>{{ headline_1 }}</h1>
+      </columns>
+    </row>
+    <spacer size="20"></spacer>
+  </container>
+</wrapper>
+
+<wrapper class="paragraphs">
+  <container>
+    <p>
+      We’re excited for you to try Sonne. <br>
+      Your item will arrive in X-X business days.<br>
+      Until then, you just sit back, relax, and start <br>
+      practicing your best "new-skin-who-dis."
+    </p>
+    <spacer size="40"></spacer>
+  </container>
+</wrapper>
+
+{{> buttons }}
+
+<wrapper class="order">
+  <container>
+    <spacer size="20"></spacer>
+    <row>
+      <columns>
+        <h3>Order Details</h3>
+      </columns>
+    </row>
+    <row>
+      <columns large="1" small="12">&nbsp;</columns>
+      <columns large="10" small="12">
+        <callout class="order-callout">
+          {% for line_item in line_items %}
+          <row>
+            <columns large="4" small="4">
+              [[ line_item.image | img_url: '400x400' | img_tag ]]
+            </columns>
+            <columns large="8" small="8">
+              <p>[[ line.title ]]</p>
+              <p>Quantity: [[ line.quantity ]]</p>
+              <p>Total: [[ line.price|money ]]</p>
+            </columns>
+          </row>
+          {% endfor %}
+        </callout>
+      </columns>
+      <columns large="1" small="12">&nbsp;</columns>
+  </container>
+</wrapper>
+
+
+<wrapper class="tables">
+  <container>
+    <row>
+      <columns large="1" small="12">&nbsp;</columns>
+      <columns large="5" small="12">
+        <h5>Billing Address</h5>
+        <p>billing_address.name</p>
+        <p>billing_address.street</p>
+        <p>billing_address.city, billing_address.province billing_address.zip</p>
+        <p>billing_address.country }}</p>
+      </columns>
+      <columns large="5" small="12">
+        <h5>Shipping Address</h5>
+        <p>shipping_address.name</p>
+        <p>shipping_address.street</p>
+        <p>shipping_address.city shipping_address.province shipping_address.zip</p>
+        <p>shipping_address.country</p>
+      </columns>
+      <columns large="1" small="12">&nbsp;</columns>
+    </row>
+    <spacer size="40"></spacer>
+  </container>
+</wrapper>
 
 {{> socials }}
 {{> footer }}
